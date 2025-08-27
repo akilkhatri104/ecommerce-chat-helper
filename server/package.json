@@ -5,7 +5,9 @@
     "type": "module",
     "scripts": {
         "dev": "tsx index.ts",
-        "seed": "tsx seed-database.ts"
+        "seed": "tsx seed-database.ts",
+        "build": "tsc",
+        "start": "node dist/index.js"
     },
     "keywords": [],
     "author": "",
