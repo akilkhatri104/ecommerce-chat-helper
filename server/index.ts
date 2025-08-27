@@ -21,7 +21,7 @@ async function startServer(){
             res.send("Langgraph Agent Server")
         })
         
-        app.post("/char",async (req: Request,res: Response) => {
+        app.post("/chat",async (req: Request,res: Response) => {
             const initialMessage = req.body.message
             const threadId = Date.now().toString()
             console.log((initialMessage));
