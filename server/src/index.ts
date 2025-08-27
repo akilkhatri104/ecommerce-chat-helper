@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import express, {Express,Request,Response} from 'express'
 import {MongoClient} from 'mongodb'
-import {callAgent} from './agent'
+import { callAgent } from './agent.js'
 
 const app: Express = express()
 
@@ -47,8 +47,8 @@ async function startServer(){
             }
         })
 
-        const PORT = process.env.PORT || 8000
-        app.listen(PORT,() => {
+        const PORT = Number(process.env.PORT) || 8000
+        app.listen(PORT,'0.0.0.0',() => {
             console.log(`Server running on port ${PORT}`);
             
         })
